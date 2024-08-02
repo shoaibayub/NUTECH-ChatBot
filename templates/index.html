@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTECH Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        #header {
+            background-color: #369e4d;
+            color: whitesmoke;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            font-display: bold;
+            position: relative;
+        }
+
+        #header img {
+            position: absolute;
+            left: 15px;
+            height: 60px;
+            width: auto;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #chat-area {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chatbox {
+            flex: 1;
+            overflow-y: auto;
+            border: 2px solid rgb(7, 59, 21);
+            background-color: #d6d6d6;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #input-container {
+            position: relative;
+        }
+
+        #user_input {
+            padding: 10px;
+            background-color: rgb(113, 234, 160);
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 35px; /* Space for the icon */
+            font-size: 16px; /* Increased font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        #input-container .fa-arrow-up {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #131313;
+            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+        }
+
+        .message {
+            margin-bottom: 10px;
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background-color: #577e39;
+            align-self: flex-end;
+            color: white;
+        }
+
+        .message.bot {
+            background-color: #ffffff;
+            align-self: flex-start;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NUTECH Logo">
+        NUTECH Chatbot
+    </div>
+    <div id="main">
+        <div id="chat-area">
+            <div id="chatbox"></div>
+            <div id="input-container">
+                <input type="text" id="user_input" placeholder="Type your message here..." autofocus />
+                <i class="fa fa-arrow-up" id="send_button"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('user_input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                sendMessage();
+            }
+        });
+
+        document.getElementById('send_button').addEventListener('click', function () {
+            sendMessage();
+        });
+
+        function sendMessage() {
+            let input = document.getElementById('user_input');
+            let message = input.value.trim();
+            if (message !== '') {
+                input.value = '';
+                addMessage('user', message);
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'message=' + encodeURIComponent(message)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    addMessage('bot', data.response);
+                });
+            }
+        }
+
+        function addMessage(sender, message) {
+            let chatbox = document.getElementById('chatbox');
+            let messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + sender;
+            messageDiv.textContent = message;
+            chatbox.appendChild(messageDiv);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
