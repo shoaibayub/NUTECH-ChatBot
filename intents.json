@@ -1,0 +1,1570 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello! How can I assist you with our university programs?",
+        "Hi there! What information are you looking for?",
+        "Greetings! How can I help you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later! If you have more questions, feel free to ask.",
+        "Bye! Come back if you need more information."
+      ]
+    },
+    {
+      "tag": "transport_facility",
+      "patterns": [
+        "Can you provide information about the transport facilities?",
+        "What are the available bus routes at Nutech?",
+        "Tell me about the transport services offered by Nutech.",
+        "I need details on the university's transportation options."
+      ],
+      "responses": [
+        "We offer transport services on three different routes . Route 1: Nutech to Rawat,Route 2: Nutech to Askari 14, Route 3: Nutech to Wah Cantt ",
+        "",
+        "Our transport fleet includes electric vehicles (EVs), coasters, and buses to ensure comfortable and efficient travel.",
+        "",
+        "The transport fee per semester is PKR 24,000.",
+        "If you have any more questions or need further details, feel free to ask!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks a lot!"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Any time! Feel free to ask more questions."
+      ]
+    },
+    {
+      "tag": "program_overview",
+      "patterns": [
+        "Tell me about the Computer Science program",
+        "What is the BSc Computer Science program like?",
+        "Can you give an overview of the Computer Science curriculum?",
+        "What does the Computer Science program cover?"
+      ],
+      "responses": [
+        "Our Bachelor of Science in Computer Science program offers a comprehensive curriculum that combines theoretical knowledge with practical skills. You'll learn programming fundamentals, data structures, algorithms, computer architecture, software engineering, artificial intelligence, databases, and more."
+      ]
+    },
+    {
+      "tag": "admission_schedule",
+      "patterns": [
+        "What is the admission schedule for 2024?",
+        "When is the next admission cycle?",
+        "Can you tell me about the admission dates for the university?"
+      ],
+      "responses": [
+        "The online registration for NUET-3 is from March 14 to May 22, 2024. The NUET-3 test will be conducted on May 25-26. The online registration for NUET-4 is from May 30 to July 14, with tests starting from July 20. The first merit list will be displayed from August 8 onwards, and classes commence on September 16, 2024."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for Computer Science?",
+        "Can I apply for Computer Science with my current qualifications?",
+        "What qualifications do I need for the Computer Science program?"
+      ],
+      "responses": [
+        "Eligibility Criteria for BS Computer Science Program:\n| Qualification                  | Requirement                  |\n|--------------------------------|------------------------------|\n| Minimum Marks                  | 50% in HSSC/A-Level or equivalent |\n| Eligible Disciplines           | FSc Pre-Engineering/Pre-Medical with Mathematics, ICS, DAE (all disciplines) |"      ]
+    },
+    {
+      "tag": "course_details",
+      "patterns": [
+        "What courses are offered in the first semester?",
+        "Can you list the courses for the second semester?",
+        "What are the subjects for the third semester?"
+      ],
+      "responses": [
+        "In the first semester, you'll take courses like Introduction to ICT, Programming Fundamentals, English Composition and Comprehension, Calculus and Analytical Geometry, Computational Thinking, and Computational Media Design. In the second semester, the courses include Applied Physics, Object Oriented Programming, Probability and Statistics, Multi-variate Calculus, and Communication and Presentation Skills."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure for national students?",
+        "How much is the semester fee?",
+        "Can you tell me the admission fee and other charges?"
+      ],
+      "responses": [
+        "The application processing fee for national students is PKR 2500. The admission fee is PKR 25000, and the security deposit is PKR 10000 (refundable). The semester fee for the BS Computer Science program is PKR 115000 per semester."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "Are there any research opportunities?",
+        "Can students participate in research projects?",
+        "What research areas are available?"
+      ],
+      "responses": [
+        "Yes, our program provides ample opportunities for undergraduate students to engage in research projects. Students can work closely with our faculty members on cutting-edge research in areas such as data science, computer vision, cybersecurity, and more."
+      ]
+    },
+    {
+      "tag": "career_prospects",
+      "patterns": [
+        "What are the career prospects for graduates?",
+        "Where can I work after graduating from Computer Science?",
+        "What job opportunities are available after completing the program?"
+      ],
+      "responses": [
+        "Graduates of our Computer Science program are in high demand across various industries. They pursue careers as software engineers, systems analysts, data scientists, cybersecurity specialists, and more."
+      ]
+    },
+    {
+      "tag": "library_mission",
+      "patterns": [
+        "What is the mission of the library?",
+        "Library mission statement",
+        "Purpose of the library"
+      ],
+      "responses": [
+        "The mission of NUTECH Library is to serve the university in the advancement of knowledge, learning, and research by providing the latest information and allied services to its users through a variety of technologies."
+      ]
+    },
+    {
+      "tag": "library_objectives",
+      "patterns": [
+        "What are the objectives of the library?",
+        "Library goals",
+        "Library objectives"
+      ],
+      "responses": [
+        "The objectives of NUTECH Library include becoming an active part of a student-centered learning system, identifying the present and future needs of library users, providing required information resources, fostering professional development, offering conducive environments for study and research, and promoting library usage culture."
+      ]
+    },
+    {
+      "tag": "library_print_collection",
+      "patterns": [
+        "Does the library have a print collection?",
+        "Printed books in the library",
+        "Library print resources"
+      ],
+      "responses": [
+        "Yes, NUTECH Library has a rich print collection that includes books, journals, and other printed materials to support the academic and research needs of its users."
+      ]
+    },
+    {
+      "tag": "library_e_resources",
+      "patterns": [
+        "What e-resources are available in the library?",
+        "Electronic resources in the library",
+        "Library e-resources"
+      ],
+      "responses": [
+        "NUTECH Library provides access to a variety of e-resources, including HEC Premium and Basic Resources, OPAC, a directory of digital resources, and VPN connections for remote access."
+      ]
+    },
+    {
+      "tag": "library_facilities",
+      "patterns": [
+        "What facilities does the library offer?",
+        "Library facilities and services",
+        "Available facilities in the library"
+      ],
+      "responses": [
+        "The library offers facilities such as ideal spaces for study and research, collaborative team areas, and a conducive environment to support the academic pursuits of its users."
+      ]
+    },
+    {
+      "tag": "library_contact",
+      "patterns": [
+        "How can I contact the library?",
+        "Library contact information",
+        "Who to contact in the library"
+      ],
+      "responses": [
+        "You can contact the NUTECH Library through the Assistant Director Library at 051-5476809, ext. 171, or via email at [email protected]"
+      ]
+    },
+    {
+      "tag": "reference_services",
+      "patterns": [
+        "What are reference services?",
+        "How can I get help with finding information?",
+        "Does the library offer assistance with research?"
+      ],
+      "responses": [
+        "Reference services provide personal assistance to library users seeking information. Our staff is ready to help you with your research needs."
+      ]
+    },
+    {
+      "tag": "help_desk_services",
+      "patterns": [
+        "What is the help desk?",
+        "How can the help desk assist me?",
+        "Is there a help desk service?"
+      ],
+      "responses": [
+        "The Help Desk Services advise researchers, students, and faculty about the services and collections of the library."
+      ]
+    },
+    {
+      "tag": "circulation_desk_services",
+      "patterns": [
+        "What is the circulation desk?",
+        "Can I borrow books from the circulation desk?",
+        "What are the lending privileges at the circulation desk?"
+      ],
+      "responses": [
+        "The Circulation Desk Services are the gateway between users and document resources. All registered library users can borrow books and other items. Lending privileges vary based on membership categories, and renewal and reservation services are available."
+      ]
+    },
+    {
+      "tag": "current_awareness_service",
+      "patterns": [
+        "What is the Current Awareness Service?",
+        "How can I stay informed about new acquisitions?",
+        "Does the library have a service to inform about new books?"
+      ],
+      "responses": [
+        "The Current Awareness Service (CAS) informs users about new acquisitions in the NUTECH Library."
+      ]
+    },
+    {
+      "tag": "reprographic_services",
+      "patterns": [
+        "What are reprographic services?",
+        "Can I print or scan documents at the library?",
+        "Does the library offer photocopying services?"
+      ],
+      "responses": [
+        "The NUTECH Library offers printing, scanning, and photocopying services to its users."
+      ]
+    },
+    {
+      "tag": "opac",
+      "patterns": [
+        "What is OPAC?",
+        "How can I search for books in the library?",
+        "Does the library have an online catalog?"
+      ],
+      "responses": [
+        "The Online Public Access Catalogue (OPAC) is an online database of all the materials held by the library. Users can locate books and other materials through OPAC."
+      ]
+    },
+    {
+      "tag": "ilms",
+      "patterns": [
+        "What is ILMS?",
+        "Does the library use a management system?",
+        "How does the library manage its collections?"
+      ],
+      "responses": [
+        "The library is equipped with the KOHA Integrated Library Management System (ILMS)."
+      ]
+    },
+    {
+      "tag": "plagiarism_checking",
+      "patterns": [
+        "Can the library check for plagiarism?",
+        "How do I get a plagiarism report?",
+        "Does the library offer plagiarism checking services?"
+      ],
+      "responses": [
+        "The library provides plagiarism checking services for faculty, staff, and students. To get a plagiarism report, email your document to [email protected]."
+      ]
+    },
+    {
+      "tag": "work_stations",
+      "patterns": [
+        "Are there computers available in the library?",
+        "Can I use a computer at the library?",
+        "Does the library have workstations?"
+      ],
+      "responses": [
+        "The library has 37 computer terminals available for researchers."
+      ]
+    },
+    {
+      "tag": "group_discussion_rooms",
+      "patterns": [
+        "Are there discussion rooms available?",
+        "Can I book a room for group study?",
+        "Does the library have rooms for group discussions?"
+      ],
+      "responses": [
+        "The library has 5 discussion rooms that user groups of 4 to 8 students can book for group discussions. Rooms can be reserved for a maximum of 2 hours and are equipped with 40\" LED TVs and the latest technology."
+      ]
+    },
+    {
+      "tag": "general_rules",
+      "patterns": [
+        "What are the general rules for using the library?",
+        "Can you tell me the library rules?",
+        "Library regulations",
+        "Rules for library usage"
+      ],
+      "responses": [
+        "The general rules for using the NUTECH Library include: \n- University card is compulsory for access.\n- Report lost cards immediately.\n- Maintain silence and keep mobiles on silent.\n- Leave personal belongings outside.\n- Drinks and eatables are not allowed.\n- Do not write or mark books.\n- Seek assistance from library staff if needed. Additionally, users are expected to comply with all library regulations to ensure a conducive environment for all."
+      ]
+    },
+    {
+      "tag": "loan_policy",
+      "patterns": [
+        "What is the loan policy?",
+        "How many books can I borrow?",
+        "Library loan details",
+        "Loan duration and rules"
+      ],
+      "responses": [
+        "The loan policy at NUTECH Library is as follows: \n- Teaching faculty can borrow 5 books for 30 days.\n- All others can borrow 3 books for 14 days.\n- Reference materials, periodicals, and certain other materials are for in-library use only. Users must return borrowed items on time to avoid fines and ensure availability for others."
+      ]
+    },
+     {
+      "tag": "library_mission",
+      "patterns": [
+        "What is the mission of the library?",
+        "Library mission statement",
+        "Purpose of the library"
+      ],
+      "responses": [
+        "The mission of NUTECH Library is to serve the university in the advancement of knowledge, learning, and research by providing the latest information and allied services to its users through a variety of technologies."
+      ]
+    },
+    {
+      "tag": "library_objectives",
+      "patterns": [
+        "What are the objectives of the library?",
+        "Library goals",
+        "Library objectives"
+      ],
+      "responses": [
+        "The objectives of NUTECH Library include becoming an active part of a student-centered learning system, identifying the present and future needs of library users, providing required information resources, fostering professional development, offering conducive environments for study and research, and promoting library usage culture."
+      ]
+    },
+    {
+      "tag": "library_print_collection",
+      "patterns": [
+        "Does the library have a print collection?",
+        "Printed books in the library",
+        "Library print resources"
+      ],
+      "responses": [
+        "Yes, NUTECH Library has a rich print collection that includes books, journals, and other printed materials to support the academic and research needs of its users. The collection is regularly updated to ensure the latest and most relevant information is available."
+      ]
+    },
+    {
+      "tag": "library_e_resources",
+      "patterns": [
+        "What e-resources are available in the library?",
+        "Electronic resources in the library",
+        "Library e-resources"
+      ],
+      "responses": [
+        "NUTECH Library provides access to a variety of e-resources, including HEC Premium and Basic Resources, OPAC, a directory of digital resources, and VPN connections for remote access. These resources include e-books, e-journals, and databases covering a wide range of subjects."
+      ]
+    },
+    {
+      "tag": "library_facilities",
+      "patterns": [
+        "What facilities does the library offer?",
+        "Library facilities and services",
+        "Available facilities in the library"
+      ],
+      "responses": [
+        "The library offers facilities such as ideal spaces for study and research, collaborative team areas, and a conducive environment to support the academic pursuits of its users. There are also computer workstations, printing and scanning services, and discussion rooms available."
+      ]
+    },
+    {
+      "tag": "library_contact",
+      "patterns": [
+        "How can I contact the library?",
+        "Library contact information",
+        "Who to contact in the library"
+      ],
+      "responses": [
+        "You can contact the NUTECH Library through the Assistant Director Library at 051-5476809, ext. 171, or via email at library@nutech.edu.pk. The library staff are available to assist with any inquiries or issues you may have."
+      ]
+    },
+    {
+      "tag": "library_mission",
+      "patterns": [
+        "What is the mission of the library?",
+        "Library mission statement",
+        "Purpose of the library"
+      ],
+      "responses": [
+        "The mission of NUTECH Library is to serve the university in the advancement of knowledge, learning, and research by providing the latest information and allied services to its users through a variety of technologies."
+      ]
+    },
+    {
+      "tag": "library_objectives",
+      "patterns": [
+        "What are the objectives of the library?",
+        "Library goals",
+        "Library objectives"
+      ],
+      "responses": [
+        "The objectives of NUTECH Library include becoming an active part of a student-centered learning system, identifying the present and future needs of library users, providing required information resources, fostering professional development, offering conducive environments for study and research, and promoting library usage culture."
+      ]
+    },
+    {
+      "tag": "library_print_collection",
+      "patterns": [
+        "Does the library have a print collection?",
+        "Printed books in the library",
+        "Library print resources"
+      ],
+      "responses": [
+        "Yes, NUTECH Library has a rich print collection that includes books, journals, and other printed materials to support the academic and research needs of its users. The collection is regularly updated to ensure the latest and most relevant information is available."
+      ]
+    },
+    {
+      "tag": "library_e_resources",
+      "patterns": [
+        "What e-resources are available in the library?",
+        "Electronic resources in the library",
+        "Library e-resources"
+      ],
+      "responses": [
+        "NUTECH Library provides access to a variety of e-resources, including HEC Premium and Basic Resources, OPAC, a directory of digital resources, and VPN connections for remote access. These resources include e-books, e-journals, and databases covering a wide range of subjects."
+      ]
+    },
+    {
+      "tag": "library_facilities",
+      "patterns": [
+        "What facilities does the library offer?",
+        "Library facilities and services",
+        "Available facilities in the library"
+      ],
+      "responses": [
+        "The library offers facilities such as ideal spaces for study and research, collaborative team areas, and a conducive environment to support the academic pursuits of its users. There are also computer workstations, printing and scanning services, and discussion rooms available."
+      ]
+    },
+    {
+      "tag": "library_contact",
+      "patterns": [
+        "How can I contact the library?",
+        "Library contact information",
+        "Who to contact in the library"
+      ],
+      "responses": [
+        "You can contact the NUTECH Library through the Assistant Director Library at 051-5476809, ext. 171, or via email at library@nutech.edu.pk. The library staff are available to assist with any inquiries or issues you may have."
+      ]
+    },
+    {
+      "tag": "reference_services",
+      "patterns": [
+        "What are reference services?",
+        "How can I get help with finding information?",
+        "Does the library offer assistance with research?"
+      ],
+      "responses": [
+        "Reference services provide personal assistance to library users seeking information. Our staff is ready to help you with your research needs. This includes guidance on using library resources, finding books and articles, and conducting literature reviews."
+      ]
+    },
+    {
+      "tag": "help_desk_services",
+      "patterns": [
+        "What is the help desk?",
+        "How can the help desk assist me?",
+        "Is there a help desk service?"
+      ],
+      "responses": [
+        "The Help Desk Services advise researchers, students, and faculty about the services and collections of the library. They can assist with finding materials, using library equipment, and navigating electronic resources."
+      ]
+    },
+    {
+      "tag": "circulation_desk_services",
+      "patterns": [
+        "What is the circulation desk?",
+        "Can I borrow books from the circulation desk?",
+        "What are the lending privileges at the circulation desk?"
+      ],
+      "responses": [
+        "The Circulation Desk Services are the gateway between users and document resources. All registered library users can borrow books and other items. Lending privileges vary based on membership categories, and renewal and reservation services are available. Overdue fines apply for late returns."
+      ]
+    },
+    {
+      "tag": "current_awareness_service",
+      "patterns": [
+        "What is the Current Awareness Service?",
+        "How can I stay informed about new acquisitions?",
+        "Does the library have a service to inform about new books?"
+      ],
+      "responses": [
+        "The Current Awareness Service (CAS) informs users about new acquisitions in the NUTECH Library. This includes new books, journals, and other resources added to the collection. Notifications are sent out regularly to keep users updated."
+      ]
+    },
+    {
+      "tag": "reprographic_services",
+      "patterns": [
+        "What are reprographic services?",
+        "Can I print or scan documents at the library?",
+        "Does the library offer photocopying services?"
+      ],
+      "responses": [
+        "The NUTECH Library offers printing, scanning, and photocopying services to its users. These services are available at a nominal fee and can be accessed during library hours."
+      ]
+    },
+    {
+      "tag": "opac",
+      "patterns": [
+        "What is OPAC?",
+        "How can I search for books in the library?",
+        "Does the library have an online catalog?"
+      ],
+      "responses": [
+        "The Online Public Access Catalogue (OPAC) is an online database of all the materials held by the library. Users can locate books and other materials through OPAC. It is accessible from both within the library and remotely."
+      ]
+    },
+    {
+      "tag": "ilms",
+      "patterns": [
+        "What is ILMS?",
+        "Does the library use a management system?",
+        "How does the library manage its collections?"
+      ],
+      "responses": [
+        "The library is equipped with the KOHA Integrated Library Management System (ILMS). This system helps manage the library's collections, circulation, cataloging, and user records efficiently."
+      ]
+    },
+    {
+      "tag": "plagiarism_checking",
+      "patterns": [
+        "Can the library check for plagiarism?",
+        "How do I get a plagiarism report?",
+        "Does the library offer plagiarism checking services?"
+      ],
+      "responses": [
+        "The library provides plagiarism checking services for faculty, staff, and students. To get a plagiarism report, email your document to library@nutech.edu.pk. The service uses advanced software to ensure originality in academic work."
+      ]
+    },
+    {
+      "tag": "work_stations",
+      "patterns": [
+        "Are there computers available in the library?",
+        "Can I use a computer at the library?",
+        "Does the library have workstations?"
+      ],
+      "responses": [
+        "The library has 37 computer terminals available for researchers. These workstations are equipped with the necessary software and internet access to support academic work."
+      ]
+    },
+    {
+      "tag": "group_discussion_rooms",
+      "patterns": [
+        "Are there discussion rooms available?",
+        "Can I book a room for group study?",
+        "Does the library have rooms for group discussions?"
+      ],
+      "responses": [
+        "The library has 5 discussion rooms that user groups of 4 to 8 students can book for group discussions. Rooms can be reserved for a maximum of 2 hours and are equipped with 40\" LED TVs and the latest technology to facilitate collaborative work."
+      ]
+    },
+    {
+      "tag": "lms_overview",
+      "patterns": [
+        "What is the Skills LMS?",
+        "Overview of Skills LMS",
+        "Skills LMS details"
+      ],
+      "responses": [
+        "The Skills Learning Management System (LMS) at NUTECH is an online platform designed to facilitate the delivery of educational content, manage course materials, and enhance the learning experience for students and instructors."
+      ]
+    },
+    {
+      "tag": "lms_features",
+      "patterns": [
+        "What are the features of Skills LMS?",
+        "Skills LMS capabilities",
+        "LMS features and tools"
+      ],
+      "responses": [
+        "The Skills LMS includes features such as course management, content delivery, assessment tools, grade tracking, communication tools, and reporting. It supports various types of content including text, video, and interactive elements to create a comprehensive learning environment."
+      ]
+    },
+    {
+      "tag": "student_access",
+      "patterns": [
+        "How can students access the Skills LMS?",
+        "Student login for Skills LMS",
+        "Accessing LMS for students"
+      ],
+      "responses": [
+        "Students can access the Skills LMS by logging in with their university credentials. The LMS is accessible via the NUTECH website, and students can view their courses, assignments, grades, and other educational resources."
+      ]
+    },
+    {
+      "tag": "instructor_access",
+      "patterns": [
+        "How can instructors access the Skills LMS?",
+        "Instructor login for Skills LMS",
+        "Accessing LMS for instructors"
+      ],
+      "responses": [
+        "Instructors can access the Skills LMS by logging in with their university credentials. The platform allows them to manage course content, communicate with students, track progress, and evaluate student performance."
+      ]
+    },
+    {
+      "tag": "course_management",
+      "patterns": [
+        "How does the LMS handle course management?",
+        "Course management features in LMS",
+        "Managing courses in Skills LMS"
+      ],
+      "responses": [
+        "The Skills LMS offers comprehensive course management features, allowing instructors to create, organize, and manage their courses. This includes uploading materials, setting up assignments and quizzes, scheduling classes, and monitoring student progress."
+      ]
+    },
+    {
+      "tag": "communication_tools",
+      "patterns": [
+        "What communication tools are available in the LMS?",
+        "LMS communication features",
+        "How to communicate with students in LMS"
+      ],
+      "responses": [
+        "The Skills LMS includes various communication tools such as discussion forums, messaging, announcements, and email integration. These tools facilitate interaction between students and instructors, enhancing the learning experience."
+      ]
+    },
+    {
+      "tag": "assessment_tools",
+      "patterns": [
+        "What assessment tools are available in the LMS?",
+        "LMS assessment features",
+        "How are assessments managed in LMS"
+      ],
+      "responses": [
+        "The Skills LMS provides a range of assessment tools, including quizzes, exams, assignments, and peer assessments. These tools enable instructors to evaluate student performance and provide timely feedback."
+      ]
+    },
+    {
+      "tag": "grade_tracking",
+      "patterns": [
+        "How does the LMS track grades?",
+        "Grade tracking features in LMS",
+        "Managing grades in Skills LMS"
+      ],
+      "responses": [
+        "The Skills LMS includes grade tracking features that allow instructors to record and manage student grades. Students can view their grades and track their academic progress throughout the course."
+      ]
+    },
+    {
+      "tag": "reporting_tools",
+      "patterns": [
+        "What reporting tools are available in the LMS?",
+        "LMS reporting features",
+        "Generating reports in Skills LMS"
+      ],
+      "responses": [
+        "The Skills LMS offers reporting tools that provide insights into student performance, course engagement, and overall learning outcomes. These reports help instructors and administrators make data-driven decisions to improve the learning experience."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "How can I get technical support for the LMS?",
+        "LMS technical support",
+        "Help with Skills LMS"
+      ],
+      "responses": [
+        "Technical support for the Skills LMS is available through the NUTECH IT support team. Users can contact support via email, phone, or the helpdesk portal for assistance with any technical issues or questions about using the LMS."
+      ]
+    },
+    {
+      "tag": "library_hours",
+      "patterns": [
+        "What are the library hours?",
+        "When is the library open?",
+        "Library opening hours",
+        "Tell me the library schedule"
+      ],
+      "responses": [
+        "The library is open from 8:00 AM to 8:00 PM Monday through Friday, and from 10:00 AM to 5:00 PM on Saturdays."
+      ]
+    },
+    {
+      "tag": "library_membership",
+      "patterns": [
+        "How can I become a member of the library?",
+        "What are the requirements for library membership?",
+        "Tell me about library membership",
+        "How do I get a library card?"
+      ],
+      "responses": [
+        "To become a member of the library, you need to register at the library desk with a valid ID and proof of address. For students and staff, membership is usually included as part of your university affiliation."
+      ]
+    },
+    {
+      "tag": "book_borrowing",
+      "patterns": [
+        "How can I borrow a book from the library?",
+        "What is the process for borrowing books?",
+        "Tell me about book borrowing",
+        "Can I borrow books from the library?"
+      ],
+      "responses": [
+        "You can borrow books by checking them out at the library desk. Make sure you have your library membership card with you. You can borrow books for a period of two weeks and renew them if needed."
+      ]
+    },
+    {
+      "tag": "book_return",
+      "patterns": [
+        "How do I return a book?",
+        "What is the process for returning books?",
+        "Tell me about book returns",
+        "When do I need to return borrowed books?"
+      ],
+      "responses": [
+        "Books can be returned at the library desk during operating hours. Please return books by the due date to avoid late fees."
+      ]
+    },
+    {
+      "tag": "fine_policy",
+      "patterns": [
+        "What is the library fine policy?",
+        "Tell me about fines for late returns",
+        "How much is the fine for overdue books?",
+        "What happens if I return a book late?"
+      ],
+      "responses": [
+        "Late returns incur a fine of $0.50 per day per book. If a book is overdue for more than 30 days, a replacement fee may be charged."
+      ]
+    },
+    {
+      "tag": "digital_resources",
+      "patterns": [
+        "What digital resources are available?",
+        "Tell me about online resources",
+        "Can I access e-books and journals?",
+        "What digital services does the library offer?"
+      ],
+      "responses": [
+        "The library provides access to a range of digital resources, including e-books, online journals, databases, and research papers. You can access these resources through the library's website with your membership credentials."
+      ]
+    },
+    {
+      "tag": "study_rooms",
+      "patterns": [
+        "Can I book a study room?",
+        "How do I reserve a study room?",
+        "Tell me about booking study rooms",
+        "Are there study rooms available?"
+      ],
+      "responses": [
+        "Yes, you can book study rooms through the library's online reservation system or by contacting the library desk. Reservations are subject to availability."
+      ]
+    },
+    {
+      "tag": "contact_library",
+      "patterns": [
+        "How can I contact the library?",
+        "What is the library contact information?",
+        "Tell me the library phone number",
+        "How do I get in touch with the library staff?"
+      ],
+      "responses": [
+        "You can contact the library by phone at (123) 456-7890 or by email at library@nutech.edu.pk. For more information, visit the library's contact page on the university website."
+      ]
+    },
+    {
+      "tag": "innovation_center_overview",
+      "patterns": [
+        "Tell me about the Innovation Centre",
+        "What is the Innovation Centre R&D at NUTECH?",
+        "What does the Innovation Centre do?",
+        "Can you give an overview of the Innovation Centre?",
+        "Describe the Innovation Centre"
+      ],
+      "responses": [
+        "The Innovation Centre R&D at NUTECH is dedicated to advancing technological research and innovation. It acts as a hub for cutting-edge research, industry collaboration, and entrepreneurial support, aiming to create solutions that address global challenges and drive technological progress."
+      ]
+    },
+    {
+      "tag": "research_focus_areas",
+      "patterns": [
+        "What are the research focus areas of the Innovation Centre?",
+        "Tell me about the research areas at the Innovation Centre",
+        "What research topics are covered by the Innovation Centre?",
+        "Can you describe the main research focus of the Centre?",
+        "List the research areas of the Innovation Centre"
+      ],
+      "responses": [
+        "The Innovation Centre focuses on a range of research areas including advanced manufacturing technologies, robotics and automation, artificial intelligence and machine learning, data analytics and big data, smart city solutions, cybersecurity, renewable energy systems, and biomedical engineering."
+      ]
+    },
+    {
+      "tag": "collaborations",
+      "patterns": [
+        "Does the Innovation Centre collaborate with other organizations?",
+        "Tell me about the Centre's collaborations",
+        "What are the partnerships of the Innovation Centre?",
+        "Can you provide information on collaborations and partnerships?",
+        "How does the Innovation Centre work with external organizations?"
+      ],
+      "responses": [
+        "The Innovation Centre actively collaborates with a diverse range of partners including industry leaders, academic institutions, government agencies, and research organizations. These collaborations involve joint research projects, technology development, knowledge exchange, and participation in industry consortia and innovation networks."
+      ]
+    },
+    {
+      "tag": "entrepreneurship_support",
+      "patterns": [
+        "Does the Innovation Centre support entrepreneurship?",
+        "Tell me about the entrepreneurship programs at the Centre",
+        "How does the Centre support startups?",
+        "Can you provide details on entrepreneurship support?",
+        "What services are available for entrepreneurs?"
+      ],
+      "responses": [
+        "The Innovation Centre supports entrepreneurship through a variety of initiatives such as incubator programs, mentorship and coaching, seed funding, business development services, and access to networking opportunities. The Centre also provides resources for business planning, market analysis, and commercialization strategies."
+      ]
+    },
+    {
+      "tag": "technology_transfer",
+      "patterns": [
+        "What is technology transfer at the Innovation Centre?",
+        "Tell me about technology transfer services",
+        "How does the Centre handle technology transfer?",
+        "Can you explain the technology transfer process?",
+        "What is involved in transferring technology from the Centre?"
+      ],
+      "responses": [
+        "Technology transfer at the Innovation Centre involves facilitating the movement of research innovations from the lab to real-world applications. This includes managing intellectual property, assisting with patent applications, licensing technologies, and supporting startups in commercializing new inventions and research outcomes."
+      ]
+    },
+    {
+      "tag": "facility_features",
+      "patterns": [
+        "What facilities are available at the Innovation Centre?",
+        "Tell me about the features of the Centre",
+        "What kind of equipment and resources does the Centre have?",
+        "Can you describe the facilities at the Innovation Centre?",
+        "What are the key features of the Innovation Centre's facilities?"
+      ],
+      "responses": [
+        "The Innovation Centre boasts state-of-the-art facilities including specialized laboratories for materials science, electronics, and robotics, advanced prototyping and fabrication tools, high-performance computing resources, and collaborative workspaces. Additionally, there are spaces for innovation workshops, seminars, and prototype testing."
+      ]
+    },
+    {
+      "tag": "events_and_workshops",
+      "patterns": [
+        "What events and workshops are organized by the Innovation Centre?",
+        "Tell me about upcoming events at the Centre",
+        "Does the Centre host any workshops?",
+        "Can you provide information on events and training sessions?",
+        "What types of events does the Innovation Centre organize?"
+      ],
+      "responses": [
+        "The Innovation Centre hosts a variety of events including research seminars, industry conferences, innovation workshops, hackathons, and networking sessions. These events aim to foster collaboration, share knowledge, and provide opportunities for researchers, entrepreneurs, and industry professionals to engage with emerging trends and technologies."
+      ]
+    },
+    {
+      "tag": "innovation_lab",
+      "patterns": [
+        "What is the Innovation Lab?",
+        "Tell me about the Innovation Lab at the Centre",
+        "What facilities does the Innovation Lab offer?",
+        "How can I use the Innovation Lab?",
+        "Describe the Innovation Lab services"
+      ],
+      "responses": [
+        "The Innovation Lab at the Centre provides a dedicated space for experimental research and prototype development. It is equipped with cutting-edge tools for design, fabrication, and testing. The Lab supports a range of activities including product prototyping, experimental analysis, and collaborative innovation projects."
+      ]
+    },
+    {
+      "tag": "funding_opportunities",
+      "patterns": [
+        "Are there funding opportunities available through the Innovation Centre?",
+        "Tell me about funding options for research projects",
+        "What types of funding does the Centre offer?",
+        "Can you provide information on grants and funding at the Centre?",
+        "How can I apply for research funding?"
+      ],
+      "responses": [
+        "The Innovation Centre offers various funding opportunities including research grants, seed funding for startups, and financial support for collaborative projects. These funding options are designed to support innovative research, development activities, and commercialization efforts. For more details on how to apply, visit the Centre’s funding page or contact their administration."
+      ]
+    },
+    {
+      "tag": "research_partners",
+      "patterns": [
+        "Who are the research partners of the Innovation Centre?",
+        "Tell me about the Centre's research partnerships",
+        "What organizations does the Centre collaborate with?",
+        "Can you list some of the Centre's research partners?",
+        "Describe the Centre's network of research partners"
+      ],
+      "responses": [
+        "The Innovation Centre partners with a range of research institutions, industry leaders, and technology companies. Some of its key research partners include leading universities, multinational corporations, and government research agencies. These partnerships enhance the Centre's research capabilities and facilitate joint ventures in technological innovation."
+      ]
+    },
+    {
+      "tag": "innovation_support",
+      "patterns": [
+        "How does the Innovation Centre support innovation projects?",
+        "Tell me about the support services for innovation",
+        "What kind of assistance does the Centre provide for innovation?",
+        "Can you describe the support for innovation initiatives?",
+        "What resources are available for innovation projects?"
+      ],
+      "responses": [
+        "The Innovation Centre provides comprehensive support for innovation projects including access to research resources, technical expertise, project management assistance, and commercialization strategies. The Centre also offers guidance on developing business models, scaling innovations, and navigating regulatory requirements."
+      ]
+    },
+    {
+      "tag": "staff_and_experts",
+      "patterns": [
+        "Who are the staff and experts at the Innovation Centre?",
+        "Tell me about the team at the Centre",
+        "What are the qualifications of the Centre’s staff?",
+        "Can you provide information on the experts at the Centre?",
+        "Describe the team working at the Innovation Centre"
+      ],
+      "responses": [
+        "The staff at the Innovation Centre includes a team of experienced researchers, engineers, and industry experts with diverse backgrounds in technology and innovation. The team consists of faculty members, research scientists, engineers, and business development professionals who bring expertise in their respective fields to support the Centre's initiatives."
+      ]
+    },
+    {
+      "tag": "contact_information",
+      "patterns": [
+        "How can I contact the Innovation Centre?",
+        "What is the contact information for the Centre?",
+        "Tell me the phone number and email for the Innovation Centre",
+        "How do I get in touch with the Centre?",
+        "Provide contact details for the Innovation Centre"
+      ],
+      "responses": [
+        "You can contact the Innovation Centre via email at innovation@nutech.edu.pk or by phone at (123) 456-7891. For more information, visit the Centre's contact page on the NUTECH website or visit the Centre's physical location at the university campus."
+      ]
+    },
+    {
+      "tag": "university_overview",
+      "patterns": [
+        "Tell me about NUTECH University",
+        "What is NUTECH University?",
+        "Give me an overview of NUTECH",
+        "What does NUTECH University offer?"
+      ],
+      "responses": [
+        "NUTECH University, also known as the National University of Technology, is a premier institution offering advanced education in technology and engineering. The university is dedicated to fostering innovation, research, and practical skills, aiming to prepare students for successful careers in various technological fields."
+      ]
+    },
+    {
+      "tag": "undergraduate_programs",
+      "patterns": [
+        "What undergraduate programs are offered at NUTECH?",
+        "List the UG programs available at NUTECH",
+        "Tell me about the undergraduate degrees at NUTECH",
+        "What are the bachelor programs at NUTECH?"
+      ],
+      "responses": [
+        "NUTECH University offers undergraduate programs in: \n1. Bachelor of Science in Computer Science \n2. Bachelor of Science in Electrical Engineering \n3. Bachelor of Science in Mechanical Engineering \n4. Bachelor of Science in Civil Engineering \n5. Bachelor of Science in Industrial Engineering \n6. Bachelor of Business Administration \n7. Bachelor of Science in Data Science \nEach program is designed to provide a solid foundation in its respective field along with practical experience."
+      ]
+    },
+    {
+      "tag": "computer_science_program",
+      "patterns": [
+        "Tell me about the Computer Science program",
+        "What is included in the Computer Science degree?",
+        "Describe the Computer Science undergraduate program",
+        "What are the courses in the Computer Science program?"
+      ],
+      "responses": [
+        "The Bachelor of Science in Computer Science at NUTECH covers a broad range of topics including programming languages, software engineering, data structures, algorithms, computer networks, databases, and artificial intelligence. The program includes core courses such as Introduction to Programming, Object-Oriented Programming, Database Management Systems, and electives in areas like cybersecurity, machine learning, and cloud computing."
+      ]
+    },
+    {
+      "tag": "engineering_programs",
+      "patterns": [
+        "Tell me about the engineering programs at NUTECH",
+        "What engineering degrees are available?",
+        "Describe the undergraduate engineering programs",
+        "What are the core courses in the engineering programs?"
+      ],
+      "responses": [
+        "NUTECH offers undergraduate degrees in several engineering disciplines including Electrical Engineering, Mechanical Engineering, Civil Engineering, and Industrial Engineering. Each program includes foundational courses in mathematics and physics, core engineering principles, and specialized subjects related to the field. Core courses might include Circuit Theory, Dynamics, Fluid Mechanics, Structural Analysis, and Operations Research."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure at NUTECH University?",
+        "Tell me about the tuition fees for undergraduate programs",
+        "How much does it cost to study at NUTECH?",
+        "What are the fees for different programs?"
+      ],
+      "responses": [
+        "The fee structure at NUTECH University varies by program and year of study. Typically, tuition fees for undergraduate programs range from $5,000 to $10,000 per year. Additional costs include registration fees, lab fees, and other administrative charges. For detailed and up-to-date information, please visit the university’s official fee structure page or contact the admissions office."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for undergraduate programs?",
+        "Tell me about the admission requirements at NUTECH",
+        "What do I need to apply for an undergraduate degree?",
+        "Describe the eligibility criteria for NUTECH's UG programs"
+      ],
+      "responses": [
+        "Eligibility criteria for undergraduate programs at NUTECH generally include having completed higher secondary education (or equivalent) with a minimum required percentage or GPA. Specific programs may have additional requirements such as subject-specific prerequisites or standardized test scores. For precise details, please refer to the admissions section on the university’s website."
+      ]
+    },
+    {
+      "tag": "application_process",
+      "patterns": [
+        "How do I apply to NUTECH University?",
+        "Describe the application process for undergraduate programs",
+        "What are the steps to apply for a degree at NUTECH?",
+        "Tell me about the admission process"
+      ],
+      "responses": [
+        "The application process for undergraduate programs at NUTECH involves completing an online application form, submitting required documents such as transcripts, certificates, and standardized test scores, and paying an application fee. Applicants might also need to attend an interview or entrance exam depending on the program. Detailed instructions are available on the university’s admissions page."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "What facilities are available on campus?",
+        "Tell me about the campus facilities at NUTECH",
+        "What kind of infrastructure does the university offer?",
+        "Describe the facilities at NUTECH University"
+      ],
+      "responses": [
+        "NUTECH University offers a range of facilities including modern classrooms, well-equipped laboratories, research centers, libraries, and computer labs. The campus features recreational areas, sports facilities, hostels, and dining options to support a well-rounded student experience."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at NUTECH?",
+        "Tell me about extracurricular activities at NUTECH",
+        "What do students do outside of classes?",
+        "Describe the student experience at NUTECH University"
+      ],
+      "responses": [
+        "Student life at NUTECH University is dynamic and engaging. Students can participate in a variety of extracurricular activities including sports, cultural events, academic clubs, and community service. The university also organizes workshops, seminars, and networking events to enhance the student experience and foster personal growth."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "What scholarships are available at NUTECH University?",
+        "Tell me about scholarship opportunities at NUTECH",
+        "How can I apply for a scholarship at NUTECH?",
+        "What are the criteria for scholarships?"
+      ],
+      "responses": [
+        "NUTECH University offers several scholarship opportunities for undergraduate students based on academic performance, financial need, and other criteria. Scholarships may include merit-based awards, need-based grants, and special scholarships for specific programs or demographics. For detailed information on available scholarships and application procedures, please visit the university’s scholarship page or contact the financial aid office."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "What research opportunities are available at NUTECH?",
+        "Tell me about research programs at NUTECH",
+        "How can I get involved in research at NUTECH?",
+        "Describe the research opportunities for students"
+      ],
+      "responses": [
+        "NUTECH University provides numerous research opportunities across various fields. Students can get involved in research projects through faculty-led research groups, independent study, and collaborative industry partnerships. The university also offers research grants and support for student-led innovation projects. For more details on research opportunities and how to participate, visit the university’s research page."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": [
+        "What career services does NUTECH offer?",
+        "Tell me about the career support at NUTECH",
+        "How can the university help with job placements?",
+        "Describe the career services available at NUTECH"
+      ],
+      "responses": [
+        "NUTECH University offers comprehensive career services to support students in their job search and career development. Services include career counseling, resume writing assistance, interview preparation, job fairs, internships, and networking opportunities with industry professionals. The university also provides resources for exploring career paths and connecting with potential employers."
+      ]
+    },
+    {
+      "tag": "alumni_services",
+      "patterns": [
+        "What services are available for alumni at NUTECH?",
+        "Tell me about the alumni network at NUTECH",
+        "How can alumni stay connected with NUTECH?",
+        "Describe the alumni services and benefits"
+      ],
+      "responses": [
+        "NUTECH University offers a range of services for alumni including networking events, career support, and access to exclusive resources and updates. Alumni can stay connected through the university’s alumni association, participate in events and reunions, and benefit from ongoing professional development opportunities. For more details, visit the alumni section of the university’s website."
+      ]
+    },
+    {
+      "tag": "international_students",
+      "patterns": [
+        "What support is available for international students?",
+        "Tell me about the international student services at NUTECH",
+        "How does NUTECH support international students?",
+        "Describe the resources for international students"
+      ],
+      "responses": [
+        "NUTECH University provides various support services for international students including visa assistance, orientation programs, language support, and cultural integration activities. The university also offers resources to help international students adjust to life in a new country and succeed academically and socially. For more information, visit the international students section of the university’s website."
+      ]
+    },
+    {
+      "tag": "contact_information",
+      "patterns": [
+        "How can I contact NUTECH University?",
+        "What is the contact information for the university?",
+        "Tell me the phone number and email for NUTECH",
+        "How do I get in touch with the university administration?"
+      ],
+      "responses": [
+        "You can contact NUTECH University via email at info@nutech.edu.pk or by phone at (123) 456-7890. For specific departments or admissions inquiries, please visit the university’s contact page on their website for more details."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure at NUTECH University?",
+        "Tell me about the tuition fees for undergraduate programs",
+        "How much does it cost to study at NUTECH?",
+        "What are the fees for different programs?"
+      ],
+      "responses": [
+        "The fee structure at NUTECH University varies by program and year of study. Typically, tuition fees for undergraduate programs range from $5,000 to $10,000 per year. Additional costs include registration fees, lab fees, and other administrative charges. For detailed and up-to-date information, please visit the university’s official fee structure page or contact the admissions office."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for undergraduate programs?",
+        "Tell me about the admission requirements at NUTECH",
+        "What do I need to apply for an undergraduate degree?",
+        "Describe the eligibility criteria for NUTECH's UG programs"
+      ],
+      "responses": [
+        "Eligibility criteria for undergraduate programs at NUTECH generally include having completed higher secondary education (or equivalent) with a minimum required percentage or GPA. Specific programs may have additional requirements such as subject-specific prerequisites or standardized test scores. For precise details, please refer to the admissions section on the university’s website."
+      ]
+    },
+    {
+      "tag": "application_process",
+      "patterns": [
+        "How do I apply to NUTECH University?",
+        "Describe the application process for undergraduate programs",
+        "What are the steps to apply for a degree at NUTECH?",
+        "Tell me about the admission process"
+      ],
+      "responses": [
+        "The application process for undergraduate programs at NUTECH involves completing an online application form, submitting required documents such as transcripts, certificates, and standardized test scores, and paying an application fee. Applicants might also need to attend an interview or entrance exam depending on the program. Detailed instructions are available on the university’s admissions page."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "What facilities are available on campus?",
+        "Tell me about the campus facilities at NUTECH",
+        "What kind of infrastructure does the university offer?",
+        "Describe the facilities at NUTECH University"
+      ],
+      "responses": [
+        "NUTECH University offers a range of facilities including modern classrooms, well-equipped laboratories, research centers, libraries, and computer labs. The campus features recreational areas, sports facilities, hostels, and dining options to support a well-rounded student experience."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at NUTECH?",
+        "Tell me about extracurricular activities at NUTECH",
+        "What do students do outside of classes?",
+        "Describe the student experience at NUTECH University"
+      ],
+      "responses": [
+        "Student life at NUTECH University is dynamic and engaging. Students can participate in a variety of extracurricular activities including sports, cultural events, academic clubs, and community service. The university also organizes workshops, seminars, and networking events to enhance the student experience and foster personal growth."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "What scholarships are available at NUTECH University?",
+        "Tell me about scholarship opportunities at NUTECH",
+        "How can I apply for a scholarship at NUTECH?",
+        "What are the criteria for scholarships?"
+      ],
+      "responses": [
+        "NUTECH University offers several scholarship opportunities for undergraduate students based on academic performance, financial need, and other criteria. Scholarships may include merit-based awards, need-based grants, and special scholarships for specific programs or demographics. For detailed information on available scholarships and application procedures, please visit the university’s scholarship page or contact the financial aid office."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "What research opportunities are available at NUTECH?",
+        "Tell me about research programs at NUTECH",
+        "How can I get involved in research at NUTECH?",
+        "Describe the research opportunities for students"
+      ],
+      "responses": [
+        "NUTECH University provides numerous research opportunities across various fields. Students can get involved in research projects through faculty-led research groups, independent study, and collaborative industry partnerships. The university also offers research grants and support for student-led innovation projects. For more details on research opportunities and how to participate, visit the university’s research page."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": [
+        "What career services does NUTECH offer?",
+        "Tell me about the career support at NUTECH",
+        "How can the university help with job placements?",
+        "Describe the career services available at NUTECH"
+      ],
+      "responses": [
+        "NUTECH University offers comprehensive career services to support students in their job search and career development. Services include career counseling, resume writing assistance, interview preparation, job fairs, internships, and networking opportunities with industry professionals. The university also provides resources for exploring career paths and connecting with potential employers."
+      ]
+    },
+    {
+      "tag": "alumni_services",
+      "patterns": [
+        "What services are available for alumni at NUTECH?",
+        "Tell me about the alumni network at NUTECH",
+        "How can alumni stay connected with NUTECH?",
+        "Describe the alumni services and benefits"
+      ],
+      "responses": [
+        "NUTECH University offers a range of services for alumni including networking events, career support, and access to exclusive resources and updates. Alumni can stay connected through the university’s alumni association, participate in events and reunions, and benefit from ongoing professional development opportunities. For more details, visit the alumni section of the university’s website."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure at NUTECH University?",
+        "Tell me about the tuition fees for undergraduate programs",
+        "How much does it cost to study at NUTECH?",
+        "What are the fees for different programs?"
+      ],
+      "responses": [
+        "The fee structure at NUTECH University varies by program and year of study. Typically, tuition fees for undergraduate programs range from $5,000 to $10,000 per year. Additional costs include registration fees, lab fees, and other administrative charges. For detailed and up-to-date information, please visit the university’s official fee structure page or contact the admissions office."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for undergraduate programs?",
+        "Tell me about the admission requirements at NUTECH",
+        "What do I need to apply for an undergraduate degree?",
+        "Describe the eligibility criteria for NUTECH's UG programs"
+      ],
+      "responses": [
+        "Eligibility criteria for undergraduate programs at NUTECH generally include having completed higher secondary education (or equivalent) with a minimum required percentage or GPA. Specific programs may have additional requirements such as subject-specific prerequisites or standardized test scores. For precise details, please refer to the admissions section on the university’s website."
+      ]
+    },
+    {
+      "tag": "application_process",
+      "patterns": [
+        "How do I apply to NUTECH University?",
+        "Describe the application process for undergraduate programs",
+        "What are the steps to apply for a degree at NUTECH?",
+        "Tell me about the admission process"
+      ],
+      "responses": [
+        "The application process for undergraduate programs at NUTECH involves completing an online application form, submitting required documents such as transcripts, certificates, and standardized test scores, and paying an application fee. Applicants might also need to attend an interview or entrance exam depending on the program. Detailed instructions are available on the university’s admissions page."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "What facilities are available on campus?",
+        "Tell me about the campus facilities at NUTECH",
+        "What kind of infrastructure does the university offer?",
+        "Describe the facilities at NUTECH University"
+      ],
+      "responses": [
+        "NUTECH University offers a range of facilities including modern classrooms, well-equipped laboratories, research centers, libraries, and computer labs. The campus features recreational areas, sports facilities, hostels, and dining options to support a well-rounded student experience."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at NUTECH?",
+        "Tell me about extracurricular activities at NUTECH",
+        "What do students do outside of classes?",
+        "Describe the student experience at NUTECH University"
+      ],
+      "responses": [
+        "Student life at NUTECH University is dynamic and engaging. Students can participate in a variety of extracurricular activities including sports, cultural events, academic clubs, and community service. The university also organizes workshops, seminars, and networking events to enhance the student experience and foster personal growth."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "What scholarships are available at NUTECH University?",
+        "Tell me about scholarship opportunities at NUTECH",
+        "How can I apply for a scholarship at NUTECH?",
+        "What are the criteria for scholarships?"
+      ],
+      "responses": [
+        "NUTECH University offers several scholarship opportunities for undergraduate students based on academic performance, financial need, and other criteria. Scholarships may include merit-based awards, need-based grants, and special scholarships for specific programs or demographics. For detailed information on available scholarships and application procedures, please visit the university’s scholarship page or contact the financial aid office."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "What research opportunities are available at NUTECH?",
+        "Tell me about research programs at NUTECH",
+        "How can I get involved in research at NUTECH?",
+        "Describe the research opportunities for students"
+      ],
+      "responses": [
+        "NUTECH University provides numerous research opportunities across various fields. Students can get involved in research projects through faculty-led research groups, independent study, and collaborative industry partnerships. The university also offers research grants and support for student-led innovation projects. For more details on research opportunities and how to participate, visit the university’s research page."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": [
+        "What career services does NUTECH offer?",
+        "Tell me about the career support at NUTECH",
+        "How can the university help with job placements?",
+        "Describe the career services available at NUTECH"
+      ],
+      "responses": [
+        "NUTECH University offers comprehensive career services to support students in their job search and career development. Services include career counseling, resume writing assistance, interview preparation, job fairs, internships, and networking opportunities with industry professionals. The university also provides resources for exploring career paths and connecting with potential employers."
+      ]
+    },
+    {
+      "tag": "alumni_services",
+      "patterns": [
+        "What services are available for alumni at NUTECH?",
+        "Tell me about the alumni network at NUTECH",
+        "How can alumni stay connected with NUTECH?",
+        "Describe the alumni services and benefits"
+      ],
+      "responses": [
+        "NUTECH University offers a range of services for alumni including networking events, career support, and access to exclusive resources and updates. Alumni can stay connected through the university’s alumni association, participate in events and reunions, and benefit from ongoing professional development opportunities. For more details, visit the alumni section of the university’s website."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure at NUTECH University?",
+        "Tell me about the tuition fees for undergraduate programs",
+        "How much does it cost to study at NUTECH?",
+        "What are the fees for different programs?"
+      ],
+      "responses": [
+        "The fee structure at NUTECH University varies by program and year of study. Typically, tuition fees for undergraduate programs range from $5,000 to $10,000 per year. Additional costs include registration fees, lab fees, and other administrative charges. For detailed and up-to-date information, please visit the university’s official fee structure page or contact the admissions office."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for undergraduate programs?",
+        "Tell me about the admission requirements at NUTECH",
+        "What do I need to apply for an undergraduate degree?",
+        "Describe the eligibility criteria for NUTECH's UG programs"
+      ],
+      "responses": [
+        "Eligibility criteria for undergraduate programs at NUTECH generally include having completed higher secondary education (or equivalent) with a minimum required percentage or GPA. Specific programs may have additional requirements such as subject-specific prerequisites or standardized test scores. For precise details, please refer to the admissions section on the university’s website."
+      ]
+    },
+    {
+      "tag": "application_process",
+      "patterns": [
+        "How do I apply to NUTECH University?",
+        "Describe the application process for undergraduate programs",
+        "What are the steps to apply for a degree at NUTECH?",
+        "Tell me about the admission process"
+      ],
+      "responses": [
+        "The application process for undergraduate programs at NUTECH involves completing an online application form, submitting required documents such as transcripts, certificates, and standardized test scores, and paying an application fee. Applicants might also need to attend an interview or entrance exam depending on the program. Detailed instructions are available on the university’s admissions page."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "What facilities are available on campus?",
+        "Tell me about the campus facilities at NUTECH",
+        "What kind of infrastructure does the university offer?",
+        "Describe the facilities at NUTECH University"
+      ],
+      "responses": [
+        "NUTECH University offers a range of facilities including modern classrooms, well-equipped laboratories, research centers, libraries, and computer labs. The campus features recreational areas, sports facilities, hostels, and dining options to support a well-rounded student experience."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at NUTECH?",
+        "Tell me about extracurricular activities at NUTECH",
+        "What do students do outside of classes?",
+        "Describe the student experience at NUTECH University"
+      ],
+      "responses": [
+        "Student life at NUTECH University is dynamic and engaging. Students can participate in a variety of extracurricular activities including sports, cultural events, academic clubs, and community service. The university also organizes workshops, seminars, and networking events to enhance the student experience and foster personal growth."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "What scholarships are available at NUTECH University?",
+        "Tell me about scholarship opportunities at NUTECH",
+        "How can I apply for a scholarship at NUTECH?",
+        "What are the criteria for scholarships?"
+      ],
+      "responses": [
+        "NUTECH University offers several scholarship opportunities for undergraduate students based on academic performance, financial need, and other criteria. Scholarships may include merit-based awards, need-based grants, and special scholarships for specific programs or demographics. For detailed information on available scholarships and application procedures, please visit the university’s scholarship page or contact the financial aid office."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "What research opportunities are available at NUTECH?",
+        "Tell me about research programs at NUTECH",
+        "How can I get involved in research at NUTECH?",
+        "Describe the research opportunities for students"
+      ],
+      "responses": [
+        "NUTECH University provides numerous research opportunities across various fields. Students can get involved in research projects through faculty-led research groups, independent study, and collaborative industry partnerships. The university also offers research grants and support for student-led innovation projects. For more details on research opportunities and how to participate, visit the university’s research page."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": [
+        "What career services does NUTECH offer?",
+        "Tell me about the career support at NUTECH",
+        "How can the university help with job placements?",
+        "Describe the career services available at NUTECH"
+      ],
+      "responses": [
+        "NUTECH University offers comprehensive career services to support students in their job search and career development. Services include career counseling, resume writing assistance, interview preparation, job fairs, internships, and networking opportunities with industry professionals. The university also provides resources for exploring career paths and connecting with potential employers."
+      ]
+    },
+    {
+      "tag": "alumni_services",
+      "patterns": [
+        "What services are available for alumni at NUTECH?",
+        "Tell me about the alumni network at NUTECH",
+        "How can alumni stay connected with NUTECH?",
+        "Describe the alumni services and benefits"
+      ],
+      "responses": [
+        "NUTECH University offers a range of services for alumni including networking events, career support, and access to exclusive resources and updates. Alumni can stay connected through the university’s alumni association, participate in events and reunions, and benefit from ongoing professional development opportunities. For more details, visit the alumni section of the university’s website."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure at NUTECH University?",
+        "Tell me about the tuition fees for undergraduate programs",
+        "How much does it cost to study at NUTECH?",
+        "What are the fees for different programs?"
+      ],
+      "responses": [
+        "The fee structure at NUTECH University varies by program and year of study. Typically, tuition fees for undergraduate programs range from $5,000 to $10,000 per year. Additional costs include registration fees, lab fees, and other administrative charges. For detailed and up-to-date information, please visit the university’s official fee structure page or contact the admissions office."
+      ]
+    },
+    {
+      "tag": "eligibility_criteria",
+      "patterns": [
+        "What are the eligibility criteria for undergraduate programs?",
+        "Tell me about the admission requirements at NUTECH",
+        "What do I need to apply for an undergraduate degree?",
+        "Describe the eligibility criteria for NUTECH's UG programs"
+      ],
+      "responses": [
+        "Eligibility criteria for undergraduate programs at NUTECH generally include having completed higher secondary education (or equivalent) with a minimum required percentage or GPA. Specific programs may have additional requirements such as subject-specific prerequisites or standardized test scores. For precise details, please refer to the admissions section on the university’s website."
+      ]
+    },
+    {
+      "tag": "application_process",
+      "patterns": [
+        "How do I apply to NUTECH University?",
+        "Describe the application process for undergraduate programs",
+        "What are the steps to apply for a degree at NUTECH?",
+        "Tell me about the admission process"
+      ],
+      "responses": [
+        "The application process for undergraduate programs at NUTECH involves completing an online application form, submitting required documents such as transcripts, certificates, and standardized test scores, and paying an application fee. Applicants might also need to attend an interview or entrance exam depending on the program. Detailed instructions are available on the university’s admissions page."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "What facilities are available on campus?",
+        "Tell me about the campus facilities at NUTECH",
+        "What kind of infrastructure does the university offer?",
+        "Describe the facilities at NUTECH University"
+      ],
+      "responses": [
+        "NUTECH University offers a range of facilities including modern classrooms, well-equipped laboratories, research centers, libraries, and computer labs. The campus features recreational areas, sports facilities, hostels, and dining options to support a well-rounded student experience."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": [
+        "What is student life like at NUTECH?",
+        "Tell me about extracurricular activities at NUTECH",
+        "What do students do outside of classes?",
+        "Describe the student experience at NUTECH University"
+      ],
+      "responses": [
+        "Student life at NUTECH University is dynamic and engaging. Students can participate in a variety of extracurricular activities including sports, cultural events, academic clubs, and community service. The university also organizes workshops, seminars, and networking events to enhance the student experience and foster personal growth."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "What scholarships are available at NUTECH University?",
+        "Tell me about scholarship opportunities at NUTECH",
+        "How can I apply for a scholarship at NUTECH?",
+        "What are the criteria for scholarships?"
+      ],
+      "responses": [
+        "NUTECH University offers several scholarship opportunities for undergraduate students based on academic performance, financial need, and other criteria. Scholarships may include merit-based awards, need-based grants, and special scholarships for specific programs or demographics. For detailed information on available scholarships and application procedures, please visit the university’s scholarship page or contact the financial aid office."
+      ]
+    },
+    {
+      "tag": "research_opportunities",
+      "patterns": [
+        "What research opportunities are available at NUTECH?",
+        "Tell me about research programs at NUTECH",
+        "How can I get involved in research at NUTECH?",
+        "Describe the research opportunities for students"
+      ],
+      "responses": [
+        "NUTECH University provides numerous research opportunities across various fields. Students can get involved in research projects through faculty-led research groups, independent study, and collaborative industry partnerships. The university also offers research grants and support for student-led innovation projects. For more details on research opportunities and how to participate, visit the university’s research page."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": [
+        "What career services does NUTECH offer?",
+        "Tell me about the career support at NUTECH",
+        "How can the university help with job placements?",
+        "Describe the career services available at NUTECH"
+      ],
+      "responses": [
+        "NUTECH University offers comprehensive career services to support students in their job search and career development. Services include career counseling, resume writing assistance, interview preparation, job fairs, internships, and networking opportunities with industry professionals. The university also provides resources for exploring career paths and connecting with potential employers."
+      ]
+    },
+    {
+      "tag": "alumni_services",
+      "patterns": [
+        "What services are available for alumni at NUTECH?",
+        "Tell me about the alumni network at NUTECH",
+        "How can alumni stay connected with NUTECH?",
+        "Describe the alumni services and benefits"
+      ],
+      "responses": [
+        "NUTECH University offers a range of services for alumni including networking events, career support, and access to exclusive resources and updates. Alumni can stay connected through the university’s alumni association, participate in events and reunions, and benefit from ongoing professional development opportunities. For more details, visit the alumni section of the university’s website."
+      ]
+    }
+  ]
+}
