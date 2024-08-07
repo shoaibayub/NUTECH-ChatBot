@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTECH Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        #header {
+            background-color: #0b1e4f;
+            color: whitesmoke;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 30px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        #header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #header img {
+            height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+
+        #header .title-container {
+            text-align: right;
+        }
+
+        #header .title-container .subtitle {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #chat-area {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chatbox {
+            flex: 1;
+            overflow-y: auto;
+            border: 3px solid rgb(7, 59, 21);
+            background-color: #d6d6d6;
+            padding: 40px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the image horizontally */
+        }
+
+        #chatbox img {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 30px;
+        }
+
+        #input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            background-color: #0b1e4f;
+            border-radius: 30px;
+            padding: 5px 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .inner-input {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            padding: 8px 10px;
+            margin-right: 10px;
+        }
+
+        #user_input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: white;
+            color: black;
+        }
+
+        #user_input::placeholder {
+            color: #a0a0a0;
+        }
+
+        .fa-microphone,
+        .fa-arrow-up {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 0 10px;
+            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+        }
+
+        .fa-microphone-listening {
+            color: rgb(235, 239, 21); /* Change color when listening */
+        }
+
+        .message {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 15px;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background-color: #577e39;
+            align-self: flex-end;
+            color: white;
+        }
+
+        .message.bot {
+            background-color: #ffffff;
+            align-self: flex-start;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NUTECH Logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Second Logo">
+        </div>
+        <div class="title-container">
+            <div>NUTECH Chatbot</div>
+            <div class="subtitle">Developed by NIC, NUTECH</div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="chat-area">
+            <div id="chatbox">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Chat Logo">
+            </div>
+            <div id="input-container">
+                <div class="input-wrapper">
+                    <div class="inner-input">
+                        <input type="text" id="user_input" placeholder="Send a message..." autofocus />
+                    </div>
+                    <i class="fa fa-microphone" id="mic_button"></i>
+                    <i class="fa fa-arrow-up" id="send_button"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('user_input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                sendMessage();
+            }
+        });
+
+        document.getElementById('send_button').addEventListener('click', function () {
+            sendMessage();
+        });
+
+        document.getElementById('mic_button').addEventListener('click', function () {
+            toggleMic();
+        });
+
+        function sendMessage() {
+            let input = document.getElementById('user_input');
+            let message = input.value.trim();
+            if (message !== '') {
+                input.value = '';
+                addMessage('user', message);
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'message=' + encodeURIComponent(message)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    addMessage('bot', data.response);
+                });
+            }
+        }
+
+        function addMessage(sender, message) {
+            let chatbox = document.getElementById('chatbox');
+            let messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + sender;
+            messageDiv.textContent = message;
+            chatbox.appendChild(messageDiv);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function toggleMic() {
+            let micButton = document.getElementById('mic_button');
+            micButton.classList.toggle('fa-microphone-listening');
+            // Add code to start/stop listening for audio input here
+        }
+    </script>
+</body>
+</html>
