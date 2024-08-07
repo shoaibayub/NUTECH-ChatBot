@@ -19,24 +19,24 @@
         #header {
             background-color: #0b1e4f;
             color: whitesmoke;
-            padding: 20px;
+            padding: 5px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             font-size: 30px;
+            justify-content: space-between;
             font-weight: 700;
             position: relative;
         }
 
         #header .logo-container {
             display: flex;
-            align-items: center;
+            flex-direction: row;
         }
 
         #header img {
             height: 60px;
             width: auto;
-            margin-right: 15px;
+            margin-right: 2rem;
         }
 
         #header .title-container {
@@ -67,18 +67,25 @@
             overflow-y: auto;
             border: 3px solid rgb(7, 59, 21);
             background-color: #d6d6d6;
-            padding: 40px;
+            padding: 20px;
             margin-bottom: 10px;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center the image horizontally */
+        }
+
+        .bgimages {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
         }
 
         #chatbox img {
             max-width: 100%;
             max-height: 200px;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
         }
 
         #input-container {
@@ -127,32 +134,61 @@
             font-size: 20px;
             color: #ffffff;
             margin: 0 10px;
-            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+            cursor: pointer;
         }
 
         .fa-microphone-listening {
-            color: rgb(235, 239, 21); /* Change color when listening */
+            color: rgb(235, 239, 21);
+        }
+
+        .message-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+
+        .message-container.user {
+            flex-direction: row-reverse;
+            align-self: flex-end;
+        }
+
+        .message-container.bot {
+            flex-direction: row;
+            align-self: flex-start;
         }
 
         .message {
-            margin-bottom: 10px;
-            max-width: 80%;
-            padding: 5px;
+            padding: 10px;
             border-radius: 5px;
             font-size: 15px;
             word-wrap: break-word;
+            max-width: 100%;
         }
 
         .message.user {
             background-color: #577e39;
-            align-self: flex-end;
             color: white;
         }
 
         .message.bot {
             background-color: #ffffff;
-            align-self: flex-start;
             color: black;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .bgimages {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -160,7 +196,7 @@
     <div id="header">
         <div class="logo-container">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NUTECH Logo">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Second Logo">
+            <img class="bgimg" src="{{ url_for('static', filename='images/orange.png') }}" alt="Second Logo">
         </div>
         <div class="title-container">
             <div>NUTECH Chatbot</div>
@@ -170,7 +206,10 @@
     <div id="main">
         <div id="chat-area">
             <div id="chatbox">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Chat Logo">
+                <div class="bgimages">
+                    <img class="bgimg" src="{{ url_for('static', filename='images/logo.png') }}" alt="Chat Logo">
+                    <img class="bgimg" src="{{ url_for('static', filename='images/orange.png') }}" alt="Chat Logo">
+                </div>
             </div>
             <div id="input-container">
                 <div class="input-wrapper">
@@ -184,25 +223,70 @@
         </div>
     </div>
     <script>
-        document.getElementById('user_input').addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' && this.value.trim() !== '') {
-                sendMessage();
+        let recognition;
+        let isListening = false;
+
+        function setupSpeechRecognition() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert('Sorry, your browser does not support speech recognition.');
+                return;
             }
-        });
 
-        document.getElementById('send_button').addEventListener('click', function () {
-            sendMessage();
-        });
+            recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
 
-        document.getElementById('mic_button').addEventListener('click', function () {
-            toggleMic();
-        });
+            recognition.onstart = function() {
+                isListening = true;
+                document.getElementById('mic_button').classList.add('fa-microphone-listening');
+            };
 
-        function sendMessage() {
-            let input = document.getElementById('user_input');
-            let message = input.value.trim();
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                sendMessage(transcript);
+                recognition.stop();
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Speech recognition error:', event.error);
+                handleRecognitionError(event.error);
+                recognition.stop();
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                document.getElementById('mic_button').classList.remove('fa-microphone-listening');
+            };
+        }
+
+        function handleRecognitionError(error) {
+            if (error === 'not-allowed') {
+                alert('Microphone access was denied. Please allow microphone access in your browser settings.');
+            } else {
+                alert('An error occurred with speech recognition: ' + error);
+            }
+        }
+
+        function toggleMic() {
+            if (!recognition) {
+                setupSpeechRecognition();
+            }
+
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        }
+
+        function sendMessage(message) {
+            if (!message) {
+                message = document.getElementById('user_input').value.trim();
+            }
+
             if (message !== '') {
-                input.value = '';
+                document.getElementById('user_input').value = '';
                 addMessage('user', message);
                 fetch('/chat', {
                     method: 'POST',
@@ -218,18 +302,42 @@
 
         function addMessage(sender, message) {
             let chatbox = document.getElementById('chatbox');
+            let messageContainer = document.createElement('div');
+            messageContainer.className = 'message-container ' + sender;
+
+            let avatar = document.createElement('img');
+            avatar.className = 'avatar';
+            
+            // Use different images based on the sender
+            if (sender === 'user') {
+                avatar.src = "{{ url_for('static', filename='images/user.jpg') }}";
+            } else {
+                avatar.src = "{{ url_for('static', filename='images/logo.png') }}";
+            }
+
             let messageDiv = document.createElement('div');
             messageDiv.className = 'message ' + sender;
             messageDiv.textContent = message;
-            chatbox.appendChild(messageDiv);
+
+            messageContainer.appendChild(avatar);
+            messageContainer.appendChild(messageDiv);
+            chatbox.appendChild(messageContainer);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
 
-        function toggleMic() {
-            let micButton = document.getElementById('mic_button');
-            micButton.classList.toggle('fa-microphone-listening');
-            // Add code to start/stop listening for audio input here
-        }
+        document.getElementById('user_input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                sendMessage();
+            }
+        });
+
+        document.getElementById('send_button').addEventListener('click', function () {
+            sendMessage();
+        });
+
+        document.getElementById('mic_button').addEventListener('click', function () {
+            toggleMic();
+        });
     </script>
 </body>
 </html>
