@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +17,35 @@
         }
 
         #header {
-            background-color: #369e4d;
+            background-color: #0b1e4f;
             color: whitesmoke;
-            padding: 20px;
+            padding: 5px 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
             font-size: 30px;
+            justify-content: space-between;
             font-weight: 700;
-            font-display: bold;
             position: relative;
         }
 
+        #header .logo-container {
+            display: flex;
+            flex-direction: row;
+        }
+
         #header img {
-            position: absolute;
-            left: 15px;
             height: 60px;
             width: auto;
+            margin-right: 2rem;
+        }
+
+        #header .title-container {
+            text-align: right;
+        }
+
+        #header .title-container .subtitle {
+            font-size: 14px;
+            font-weight: normal;
         }
 
         #main {
@@ -54,93 +65,228 @@
         #chatbox {
             flex: 1;
             overflow-y: auto;
-            border: 2px solid rgb(7, 59, 21);
+            border: 3px solid rgb(7, 59, 21);
             background-color: #d6d6d6;
-            padding: 10px;
+            padding: 20px;
             margin-bottom: 10px;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
         }
 
+        .bgimages {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        #chatbox img {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 5px;
+        }
+
         #input-container {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            background-color: #0b1e4f;
+            border-radius: 30px;
+            padding: 5px 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .inner-input {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            padding: 8px 10px;
+            margin-right: 10px;
         }
 
         #user_input {
-            padding: 10px;
-            background-color: rgb(113, 234, 160);
-            border-radius: 5px;
+            flex: 1;
+            border: none;
             outline: none;
-            width: 100%;
-            box-sizing: border-box;
-            padding-right: 35px; /* Space for the icon */
-            font-size: 16px; /* Increased font size */
-            font-weight: bold; /* Bold text */
+            font-size: 16px;
+            font-weight: bold;
+            background-color: white;
+            color: black;
         }
 
-        #input-container .fa-arrow-up {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+        #user_input::placeholder {
+            color: #a0a0a0;
+        }
+
+        .fa-microphone,
+        .fa-arrow-up {
             font-size: 20px;
-            color: #131313;
-            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+            color: #ffffff;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .fa-microphone-listening {
+            color: rgb(235, 239, 21);
+        }
+
+        .message-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+
+        .message-container.user {
+            flex-direction: row-reverse;
+            align-self: flex-end;
+        }
+
+        .message-container.bot {
+            flex-direction: row;
+            align-self: flex-start;
         }
 
         .message {
-            margin-bottom: 10px;
-            max-width: 70%;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 5px;
             font-size: 15px;
             word-wrap: break-word;
+            max-width: 100%;
         }
 
         .message.user {
             background-color: #577e39;
-            align-self: flex-end;
             color: white;
         }
 
         .message.bot {
             background-color: #ffffff;
-            align-self: flex-start;
             color: black;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .bgimages {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div id="header">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NUTECH Logo">
-        NUTECH Chatbot
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NUTECH Logo">
+            <img class="bgimg" src="{{ url_for('static', filename='images/orange.png') }}" alt="Second Logo">
+        </div>
+        <div class="title-container">
+            <div>NUTECH Chatbot</div>
+            <div class="subtitle">Developed by NIC, NUTECH</div>
+        </div>
     </div>
     <div id="main">
         <div id="chat-area">
-            <div id="chatbox"></div>
+            <div id="chatbox">
+                <div class="bgimages">
+                    <img class="bgimg" src="{{ url_for('static', filename='images/logo.png') }}" alt="Chat Logo">
+                    <img class="bgimg" src="{{ url_for('static', filename='images/orange.png') }}" alt="Chat Logo">
+                </div>
+            </div>
             <div id="input-container">
-                <input type="text" id="user_input" placeholder="Type your message here..." autofocus />
-                <i class="fa fa-arrow-up" id="send_button"></i>
+                <div class="input-wrapper">
+                    <div class="inner-input">
+                        <input type="text" id="user_input" placeholder="Send a message..." autofocus />
+                    </div>
+                    <i class="fa fa-microphone" id="mic_button"></i>
+                    <i class="fa fa-arrow-up" id="send_button"></i>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        document.getElementById('user_input').addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' && this.value.trim() !== '') {
-                sendMessage();
+        let recognition;
+        let isListening = false;
+
+        function setupSpeechRecognition() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert('Sorry, your browser does not support speech recognition.');
+                return;
             }
-        });
 
-        document.getElementById('send_button').addEventListener('click', function () {
-            sendMessage();
-        });
+            recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
 
-        function sendMessage() {
-            let input = document.getElementById('user_input');
-            let message = input.value.trim();
+            recognition.onstart = function() {
+                isListening = true;
+                document.getElementById('mic_button').classList.add('fa-microphone-listening');
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                sendMessage(transcript);
+                recognition.stop();
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Speech recognition error:', event.error);
+                handleRecognitionError(event.error);
+                recognition.stop();
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                document.getElementById('mic_button').classList.remove('fa-microphone-listening');
+            };
+        }
+
+        function handleRecognitionError(error) {
+            if (error === 'not-allowed') {
+                alert('Microphone access was denied. Please allow microphone access in your browser settings.');
+            } else {
+                alert('An error occurred with speech recognition: ' + error);
+            }
+        }
+
+        function toggleMic() {
+            if (!recognition) {
+                setupSpeechRecognition();
+            }
+
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        }
+
+        function sendMessage(message) {
+            if (!message) {
+                message = document.getElementById('user_input').value.trim();
+            }
+
             if (message !== '') {
-                input.value = '';
+                document.getElementById('user_input').value = '';
                 addMessage('user', message);
                 fetch('/chat', {
                     method: 'POST',
@@ -156,12 +302,42 @@
 
         function addMessage(sender, message) {
             let chatbox = document.getElementById('chatbox');
+            let messageContainer = document.createElement('div');
+            messageContainer.className = 'message-container ' + sender;
+
+            let avatar = document.createElement('img');
+            avatar.className = 'avatar';
+            
+            // Use different images based on the sender
+            if (sender === 'user') {
+                avatar.src = "{{ url_for('static', filename='images/user.jpg') }}";
+            } else {
+                avatar.src = "{{ url_for('static', filename='images/logo.png') }}";
+            }
+
             let messageDiv = document.createElement('div');
             messageDiv.className = 'message ' + sender;
             messageDiv.textContent = message;
-            chatbox.appendChild(messageDiv);
+
+            messageContainer.appendChild(avatar);
+            messageContainer.appendChild(messageDiv);
+            chatbox.appendChild(messageContainer);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
+
+        document.getElementById('user_input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                sendMessage();
+            }
+        });
+
+        document.getElementById('send_button').addEventListener('click', function () {
+            sendMessage();
+        });
+
+        document.getElementById('mic_button').addEventListener('click', function () {
+            toggleMic();
+        });
     </script>
 </body>
 </html>
